@@ -1,0 +1,15 @@
+{% extends "empleado/base.html" %}
+{% block titulo %}
+LOGIN
+{% endblock %}
+{% block cuerpo %}
+  <form class="" action="{url empleado:user_login}" method="post">
+    {% csrf_token %}
+    <h3>Por favor ingrese sus datos:</h3>
+    <label for="usuario">Usuario:</label>
+    <input type="text" name="usuario" value="Usuario">
+    <label for="pass">Password:</label>
+    <input type="password" name="pass" value="Password">
+    <input type="submit" name="login" value="Login">
+  </form>
+{% endblock %}

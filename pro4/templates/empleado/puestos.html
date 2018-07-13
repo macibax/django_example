@@ -1,0 +1,26 @@
+{% extends "empleado/base.html" %}
+{% block titulo %}
+PUESTOS
+{% endblock %}
+{% block cuerpo %}
+<div class="container">
+  {% if puestos_data %}
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <td scope="col">Nombre</td>
+        <td scope="col">Descripcion</td>
+      </tr>
+    </thead>
+    <tbody>
+      {% for puesto in puestos_data %}
+        <tr>
+          <td>{{puesto.nombre}}</td>
+          <td>{{puesto.descripcion}}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  {% endif %}
+</div>
+{% endblock %}

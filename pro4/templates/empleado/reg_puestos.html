@@ -1,0 +1,15 @@
+{% extends "empleado/base.html" %}
+{% block titulo %}
+REGISTRAR PUESTO
+{% endblock %}
+{% block cuerpo %}
+<div class="container">
+  <form class="" method="post">
+    <div class="form-group">
+    {{form.as_p}}
+    {% csrf_token %}
+    <input type="submit" class="btn btn-primary" name="reg_puesto_button" value="Registrar">
+    </div>
+  </form>
+</div>
+{% endblock %}

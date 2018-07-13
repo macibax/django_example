@@ -1,0 +1,16 @@
+{% extends "empleado/base.html" %}
+{% block titulo %}
+REGISTRAR USUARIO
+{% endblock %}
+{% block cuerpo %}
+  {% if registrado %}
+    <h3>Registrado exitosamente!</h3>
+  {% else %}
+    <form class="" enctype="multipart/form-data" method="post">
+      {% csrf_token %}
+      {{user_form.as_p}}
+      {{profile_form.as_p}}
+      <input type="submit" name="" value="Registrar">
+    </form>
+  {% endif %}
+{% endblock %}

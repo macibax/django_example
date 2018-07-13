@@ -1,0 +1,30 @@
+{% extends "empleado/base.html" %}
+{% block titulo %}
+EMPLEADOS
+{% endblock %}
+{% block cuerpo %}
+<div class="container">
+  {% if empleados_data %}
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <td>Nombre</td>
+        <td>Apellido</td>
+        <td>Puesto</td>
+        <td>Email</td>
+      </tr>
+    </thead>
+    <tbody>
+      {% for empleado in empleados_data %}
+        <tr>
+          <td>{{empleado.nombre}}</td>
+          <td>{{empleado.apellido}}</td>
+          <td>{{empleado.puesto}}</td>
+          <td>{{empleado.email}}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  {% endif %}
+</div>
+{% endblock %}
