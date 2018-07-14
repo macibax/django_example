@@ -27,7 +27,7 @@ SECRET_KEY = 'rfv3bx-^j+agf+q%ge+&(q&1z5g+f^(k9+_*o9__e7pfkk^=)*'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['macibax.pythonanywhere.com']
 
 
 # Application definition
